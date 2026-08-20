@@ -1,0 +1,128 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" width="480" height="440" role="img" aria-label="渔城青耘品牌吉祥物 青渔 3D立体版">
+  <defs>
+    <radialGradient id="body3d" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#4aab72"/>
+      <stop offset="0.45" stop-color="#2f8a52"/>
+      <stop offset="0.8" stop-color="#1e6b3c"/>
+      <stop offset="1" stop-color="#14532d"/>
+    </radialGradient>
+    <radialGradient id="belly3d" cx="0.5" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#fdfbf5"/>
+      <stop offset="1" stop-color="#efe6d0"/>
+    </radialGradient>
+    <linearGradient id="tail3d" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f8a52"/>
+      <stop offset="1" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="hat3d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7e2b0"/>
+      <stop offset="1" stop-color="#dfb96f"/>
+    </linearGradient>
+    <linearGradient id="cam3d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2994a"/>
+      <stop offset="1" stop-color="#d97a1e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0c3b20" flood-opacity="0.35"/>
+    </filter>
+    <filter id="softglow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- 底部浪花 -->
+  <g fill="#dbeade" opacity="0.8">
+    <ellipse cx="150" cy="408" rx="70" ry="13"/>
+    <ellipse cx="255" cy="418" rx="90" ry="15"/>
+    <ellipse cx="365" cy="406" rx="60" ry="11"/>
+    <ellipse cx="92" cy="414" rx="40" ry="9"/>
+  </g>
+
+  <!-- 数据光点（闪烁动画：class dot） -->
+  <g>
+    <circle class="dot" cx="84" cy="136" r="8" fill="#e8862e" opacity="0.95" filter="url(#softglow)"/>
+    <path class="dot" d="M84 126v-9M79 131l-8-5M89 131l8-5" stroke="#e8862e" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <circle class="dot d2" cx="420" cy="118" r="7" fill="#2f8a52" opacity="0.9" filter="url(#softglow)"/>
+    <path class="dot d2" d="M420 109v-8M416 114l-7-4M424 114l7-4" stroke="#2f8a52" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <circle class="dot d3" cx="74" cy="268" r="5.5" fill="#e8b23a" opacity="0.9"/>
+    <circle class="dot d4" cx="406" cy="306" r="5.5" fill="#e8862e" opacity="0.85"/>
+    <circle class="dot d5" cx="122" cy="78" r="4.5" fill="#4aab72" opacity="0.85"/>
+    <circle class="dot d6" cx="396" cy="70" r="4.5" fill="#e8b23a" opacity="0.85"/>
+  </g>
+
+  <!-- 麦穗尾巴（摆动动画：class tail） -->
+  <g class="tail">
+    <path d="M330 220 Q396 186 420 224 Q398 240 354 236 Q394 258 406 296 Q370 306 344 286 Q358 316 342 336 Q318 320 330 288 Q310 264 322 246 Z"
+          fill="url(#tail3d)"/>
+    <path d="M330 220 Q392 188 414 222 Q398 236 356 234 Q392 256 402 292 Q372 302 346 284 Q360 312 344 330 Q322 316 332 288 Q314 262 324 246 Z"
+          fill="#3d9a5f" opacity="0.55"/>
+    <g fill="#e8b23a">
+      <ellipse cx="384" cy="222" rx="11" ry="6.5" transform="rotate(-28 384 222)"/>
+      <ellipse cx="402" cy="246" rx="11" ry="6.5" transform="rotate(-10 402 246)"/>
+      <ellipse cx="398" cy="272" rx="11" ry="6.5" transform="rotate(10 398 272)"/>
+      <ellipse cx="382" cy="298" rx="10" ry="6" transform="rotate(26 382 298)"/>
+    </g>
+  </g>
+
+  <!-- 背鳍 -->
+  <path class="fin-top" d="M238 112 Q264 84 296 116 Q278 132 254 132 Z" fill="#e8862e"/>
+  <path d="M268 120 Q280 106 294 120 Q284 130 270 130 Z" fill="#f2a45c" opacity="0.9"/>
+
+  <!-- 鱼身（3D 渐变 + 高光） -->
+  <g filter="url(#shadow)">
+    <ellipse cx="238" cy="238" rx="130" ry="120" fill="url(#body3d)"/>
+    <ellipse cx="200" cy="176" rx="46" ry="30" fill="#ffffff" opacity="0.14" transform="rotate(-20 200 176)"/>
+    <path d="M150 270 Q238 366 334 264 Q312 342 238 348 Q166 344 150 270 Z" fill="url(#belly3d)"/>
+    <ellipse cx="238" cy="310" rx="82" ry="52" fill="url(#belly3d)"/>
+  </g>
+
+  <!-- 侧鳍（摆动动画） -->
+  <path class="fin-side" d="M194 324 Q164 352 208 356 Q224 342 216 328 Z" fill="#e8862e"/>
+  <path class="fin-side f2" d="M288 320 Q316 346 278 354 Q262 340 272 326 Z" fill="#d97a1e"/>
+
+  <!-- 相机（3D 质感） -->
+  <g class="camera">
+    <rect x="204" y="240" width="68" height="48" rx="9" fill="url(#cam3d)"/>
+    <rect x="204" y="240" width="68" height="18" rx="9" fill="#ffffff" opacity="0.18"/>
+    <rect x="222" y="228" width="34" height="18" rx="5" fill="#c96a18"/>
+    <rect x="210" y="250" width="32" height="30" rx="6" fill="#3a3f45"/>
+    <circle cx="226" cy="265" r="11" fill="#20242a"/>
+    <circle cx="226" cy="265" r="6" fill="#e8b23a"/>
+    <circle cx="228" cy="263" r="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="256" cy="252" r="4.5" fill="#ffe3bd" opacity="0.95"/>
+    <rect x="240" y="284" width="14" height="7" rx="2" fill="#c96a18"/>
+  </g>
+
+  <!-- 眼睛（眨眼动画：class eye） -->
+  <g class="eye">
+    <ellipse cx="198" cy="194" rx="23" ry="26" fill="#ffffff"/>
+    <ellipse cx="202" cy="198" rx="15" ry="18" fill="#22301f"/>
+    <circle cx="208" cy="190" r="6" fill="#ffffff"/>
+    <circle cx="196" cy="206" r="3" fill="#ffffff" opacity="0.75"/>
+    <ellipse cx="276" cy="194" rx="23" ry="26" fill="#ffffff"/>
+    <ellipse cx="272" cy="198" rx="15" ry="18" fill="#22301f"/>
+    <circle cx="278" cy="190" r="6" fill="#ffffff"/>
+    <circle cx="266" cy="206" r="3" fill="#ffffff" opacity="0.75"/>
+  </g>
+
+  <!-- 腮红 -->
+  <ellipse cx="170" cy="240" rx="15" ry="10" fill="#f2a45c" opacity="0.6"/>
+  <ellipse cx="304" cy="240" rx="15" ry="10" fill="#f2a45c" opacity="0.6"/>
+
+  <!-- 嘴巴 -->
+  <path d="M230 250 q7 9 15 0" stroke="#0f3d22" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M232 254 q6 4 12 0" stroke="#c96a18" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- 草帽（3D 质感） -->
+  <g class="hat">
+    <ellipse cx="238" cy="136" rx="98" ry="23" fill="url(#hat3d)"/>
+    <path d="M176 136 Q178 96 238 92 Q298 96 300 136 Z" fill="url(#hat3d)"/>
+    <ellipse cx="238" cy="136" rx="98" ry="23" fill="none" stroke="#cfa95c" stroke-width="3"/>
+    <path d="M182 136 L180 116 M210 130 L208 106 M268 130 L270 106 M296 136 L298 116 M236 94 Q222 76 242 72 Q260 76 244 94 Z" stroke="#cfa95c" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <path d="M176 136 Q180 100 238 94 Q294 100 300 136 Q238 150 176 136 Z" fill="#ffffff" opacity="0.08"/>
+    <rect x="166" y="130" width="144" height="11" rx="5.5" fill="#e8862e"/>
+    <rect x="166" y="130" width="144" height="5" rx="2.5" fill="#f2a45c" opacity="0.65"/>
+  </g>
+</svg>
