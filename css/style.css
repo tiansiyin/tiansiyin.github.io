@@ -77,6 +77,18 @@ ul{list-style:none}
 .mini{background:var(--green-soft);border-radius:14px;padding:18px;text-align:center}
 .mini strong{display:block;font-size:26px;color:var(--green-dark)}
 .mini span{font-size:13.5px;color:var(--ink-soft)}
+/* ===== 品牌 IP · 青渔 ===== */
+.hero-ip{display:flex;align-items:center;justify-content:center;gap:22px;margin:44px auto 0;max-width:760px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);border-radius:20px;padding:22px 28px;text-align:left}
+.hero-ip-img{width:130px;height:auto;flex:0 0 auto;filter:drop-shadow(0 8px 16px rgba(0,0,0,.25))}
+.hero-ip-text{color:#fff}
+.hero-ip-tag{display:inline-block;background:var(--orange);color:#fff;font-size:12.5px;font-weight:700;padding:3px 12px;border-radius:999px;margin-bottom:8px;letter-spacing:1px}
+.hero-ip-text p{font-size:14.5px;color:rgba(255,255,255,.92);margin-bottom:12px;line-height:1.7}
+.btn-sm{padding:8px 18px;font-size:13.5px}
+.ip-card{display:flex;align-items:center;gap:26px;background:linear-gradient(135deg,#ffffff,#eef5ee);border:1px solid var(--line);border-radius:var(--radius);padding:28px 32px;margin-top:30px;box-shadow:var(--shadow)}
+.ip-card-img{width:150px;height:auto;flex:0 0 auto;filter:drop-shadow(0 6px 14px rgba(20,83,45,.18))}
+.ip-card-body h3{color:var(--green-dark);font-size:19px;margin-bottom:8px}
+.ip-card-body p{font-size:14.5px;color:var(--ink-soft);line-height:1.8}
+.ip-card-body .muted{margin-top:8px;color:var(--orange-dark);font-weight:600}
 
 /* ===== 业务闭环 ===== */
 .loop-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -164,7 +176,11 @@ ul{list-style:none}
   .market-card.som{grid-column:1 / -1}
 }
 @media (max-width:768px){
-  .nav-toggle{display:block}
+  .hero-ip{flex-direction:column;text-align:center;padding:20px 18px;gap:14px}
+  .hero-ip-img{width:104px}
+  .ip-card{flex-direction:column;text-align:center;padding:24px 18px}
+  .ip-card-img{width:120px}
+  .hero-ip-text p{font-size:13.5px}
   .main-nav{display:none;position:absolute;top:66px;left:0;right:0;background:var(--cream);flex-direction:column;padding:12px 20px;border-bottom:1px solid var(--line);gap:4px}
   .main-nav.open{display:flex}
   .main-nav a{padding:10px 8px;width:100%}
